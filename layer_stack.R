@@ -1,0 +1,7 @@
+library(raster)
+library(rgdal)
+library(EBImage)
+Blue <-brick("C:/Users/Tagel/Desktop/R_FILES/layer Stack/Blue_10.tif")
+A=stack(c("C:/Users/Tagel/Desktop/R_FILES/layer Stack/, c(Blue_10.tif","C:/Users/Tagel/Desktop/R_FILES/layer Stack/Green_10.tif","C:/Users/Tagel/Desktop/R_FILES/layer Stack/R_10.tif","NIR_10.tif"))
+writeRaster(A, filename="LS_10.tif")
+plotRGB(A, 3, 2, 1, stretch="hist")
